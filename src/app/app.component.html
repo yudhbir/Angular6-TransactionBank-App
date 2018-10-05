@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Transaction Bank</h1>
+        <p></p>
+    </div>
+	<div class="row">
+	  <div class="col-xs-4">
+		<div class="left_bar">
+			<div class="make_transfer">
+				<i class="glyphicon glyphicon-refresh"></i>
+				<strong> Make a Transfer</strong>
+			</div>
+			<div class="amount_info">
+				<ul>					
+					<li>
+						<label>FROM ACCOUNT</label>
+						<input type="text" name="pay_from_account" value="{{pay_item.from_account}}">
+					</li>					
+					<li>
+						<label>TO ACCOUNT</label>
+						<input type="text" name="pay_to_account" value="{{pay_item.to_account}}">
+					</li>
+					<li>
+						<label>AMOUNT</label>
+						<input type="text" name="pay_amount" value="{{pay_item.amount}}">
+					</li>
+					<li>&nbsp;</li>
+					<li><input type="button" value="submit" class="trans_btn"></li>
+				</ul>
+			</div>
+		</div>
+	  
+	  </div>	  
+	  <div class="col-xs-8">
+			<div class="recent_transaction">
+				<i class="glyphicon glyphicon-briefcase"></i>
+				<strong> Recent Transaction</strong>
+			</div>
+			<div class="transaction_sort">
+				<div class="col-lg-6 col-xs-12">
+					<input type="text" class="sort_frm" name="search_filter" [(ngModel)]="queryfilter">
+				</div>
+				<div class="col-lg-6 col-xs-12" class="sort_filter">
+					<span>Sort by</span>
+					<input type="button" value="ToAccount" (click)="sortBy('to_account');">
+					<input type="button" value="Method" (click)="sortBy('payment_method');">
+					<input type="button" value="Amount" (click)="sortBy('amount');">
+				</div>
+			</div>
+			<div class="record_table table-responsive">
+				<table class="table">
+				<tr>
+					<th>From Account</th>
+					<th>To Account</th>
+					<th>Payment Method</th>
+					<th>Payment Amount</th>
+					<th>Action</th>
+				</tr>
+				<tr *ngFor="let list of listing.cars | filter: queryfilter">					
+					<td>{{list.from_account}}</td><td>{{list.to_account}}</td><td>{{list.payment_method}}</td><td>{{list.amount}}</td>
+					<td><a (click)="get_records(list);" style="cursor:pointer;"><button class="primary-btn">Make Payment</button></a></td>
+				</tr>
+				</table>
+			</div>
+	  </div>
+	</div>
+</div>

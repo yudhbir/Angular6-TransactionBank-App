@@ -1,0 +1,12 @@
+{ "cars": [
+	{"from_account":"67590807", "to_account":"80979870","payment_method":"Credit card","amount":"$100" },
+	{"from_account":"67591807", "to_account":"80979871","payment_method":"Debit card","amount":"$200" },
+	{"from_account":"67592807", "to_account":"80979872","payment_method":"Master card","amount":"$340" },
+	{"from_account":"67593807", "to_account":"80979873","payment_method":"Debit card","amount":"$400" },
+	{"from_account":"67594807", "to_account":"80979874","payment_method":"Credit card","amount":"$500" },
+	{"from_account":"67595807", "to_account":"80979875","payment_method":"Master card","amount":"$220" },
+	{"from_account":"67596807", "to_account":"80979876","payment_method":"Debit card","amount":"$300" },
+	{"from_account":"67597807", "to_account":"80979877","payment_method":"Credit card","amount":"$410" },
+	{"from_account":"67598807", "to_account":"80979878","payment_method":"Master card","amount":"$600" }
+	]
+ }
